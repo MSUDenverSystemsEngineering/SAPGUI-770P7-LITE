@@ -146,7 +146,7 @@ Try {
 		}
 
 		## <Perform Installation tasks here>
-		$exitCode = Execute-Process -Path "$dirFiles\Setup\NwSapSetup.exe" -Parameters "/package:`"SAPGUI_770_LITE`" /silent" # -IgnoreExitCodes "129"
+		$exitCode = Execute-Process -Path "$dirFiles\Setup\NwSapSetup.exe" -Parameters "/package:`"SAPGUI_770_LITE`" /silent /norestart" # -IgnoreExitCodes "129"
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 		# Return Code 129 - Reboot is recommended
 
@@ -260,8 +260,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUQbmz/3nvoy+FPviEBw05aAeu
-# /eSgghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUOCFhG1FSQLZKSlEn7+quTWTO
+# EmagghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -361,13 +361,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFHQs00ooCXDkESAHU+wuJH1+Cv/aMA0GCSqGSIb3DQEBAQUABIIBgCvIVJwP
-# ovHrlOCGoEAnUb2z05gS0HRxTxQbUHaVP04DTzkJF5322l6ep9RESUp57XHc5vja
-# KEF0GK4awx8aFPPvT75vgJJX6MBJwC+CyGyeqSfc3E31/aQmPeMCvvWxzLbdBojM
-# ZGlwbt+oBxS5lP0gC2CyriXHOK8S7PtJzskVc9M4nEK+eE3+JVAqzsfTSEej1CZP
-# 7AFiyHU/ETDjyFTARG+bFALRywSqrl6SoE8c+oRqpDqrcVxJRYED8rz+Bw8m1iYy
-# B1dY5htWurnuwsEBWB36yMZlCCoRjkiJdtYiV5onnUSzi5dY4F/QB+4RsrKCHQy5
-# iQBwyF31xighyao9vUtQYIuygXWTN75yf7SXGokdU4+qBlQcswWm9q309+yePLCd
-# VJsITi2a2nT3t5GZ09cxq02HdJowKMnH6wSI76lgwFV6w3b8RH9ePH/Z5q8nnaCl
-# 9v9XtsZx58wkOnQcfm4Lqb4M3UVUXz60oMQBqiIXdjqY2ajGR06WEsbK8w==
+# MRYEFN4rEt2oCKVNPqMLIJtkoVjiFf4MMA0GCSqGSIb3DQEBAQUABIIBgENVDXiD
+# +KizsSmvhtJoZZh+5Ow7J4hAtU94aHQdWEzOWjtoPdYU2eydwMBZII/ND0oPwhhU
+# BMnrbH+avEXBbLt99XeJHNlY0UNn3w/VzsZlGAW5ZapeK2/S3oIMV1YH2WQ8IfJx
+# BhJQ4x7iR5B6YFBNsqKep7mbVGsjnI7WWHTGF+IjBdSmA01zwPgaRCtbQQO6OmR9
+# 6ClXIoC+oQz4pcDQQ642yn4vXUmJe85ndPXPLPUaa7DEGr5sm4DQpRrk+bQ5xDHe
+# ZX39eE0gSJLnVZAGB+bY5nZjVvIK1NynIz7UuNHsS0/pYOsR78kvsHLLyGo5GWlB
+# vnldKJQqbI76uA5dPwSSIV22Cg4XMb2pWjP74DxVAX5vSUi2r+cZizuvRnzmXOOS
+# XjNafOgvPrbcEpZ8oQcvhvxDHqWhylc0VR5I++T2zNEmLuwccjMXzlMvVNZ+s0JK
+# wN4PFYfQcAHoQqOF67arw49baoZB05kcUc19scP49Jm8KD7Rm5x2gWsF7g==
 # SIG # End signature block
